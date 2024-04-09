@@ -23,7 +23,7 @@ header {
 
 main {
   padding: 50px;
-  width: 500px;
+  width: 700px;
 }
 
 section {
@@ -44,6 +44,12 @@ h1 {
 input {
   width: 500px;
   height: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 28px;
+}
+
+li {
+  width: 200px;
 }
 
 .log-task {
@@ -52,8 +58,8 @@ input {
   padding-bottom: 50px;
 }
 
-.log-btn {
-  width: 100px;
+.btn-log {
+  width: 75px;
   margin-left: 10px;
 }
 
