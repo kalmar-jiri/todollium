@@ -39,10 +39,12 @@ taskList.addEventListener('click', e => {
   }
 });
 
+// Save data to browser - called upon creating new task, completing task or deleting task
 const saveData = () => {
   localStorage.setItem('data', taskList.innerHTML);
 };
 
+// Immediately show saved data
 const showTask = () => {
   taskList.innerHTML = localStorage.getItem('data');
 };
