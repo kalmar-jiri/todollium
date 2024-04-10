@@ -2,7 +2,6 @@
 
 const inputElement = document.querySelector('input');
 const btnLog = document.querySelector('.btn-log');
-const btnComplete = document.querySelectorAll('.btn-complete');
 const btnsDelete = document.querySelectorAll('.btn-delete');
 const taskList = document.querySelector('ul');
 
@@ -18,15 +17,10 @@ const createTask = () => {
     const btnDiv = document.createElement('div');
     btnDiv.classList.add('task-btn');
 
-    const completeBtn = document.createElement('button');
-    completeBtn.classList.add('btn-complete');
-    completeBtn.textContent = '✅';
-
     const deleteBtn = document.createElement('button');
     deleteBtn.classList.add('btn-delete');
     deleteBtn.textContent = '❌';
 
-    btnDiv.appendChild(completeBtn);
     btnDiv.appendChild(deleteBtn);
     taskDiv.appendChild(taskLi);
     taskDiv.appendChild(btnDiv);
@@ -39,15 +33,11 @@ const createTask = () => {
   }
 };
 
-const removeTask = event => {
-  const taskDiv = event.target.closest('.task');
-  if (taskDiv) {
-    taskDiv.remove();
-  }
+const removeTask = e => {
+  e.target.parentElement.parentElement.remove();
 };
 
 btnLog.addEventListener('click', createTask);
-
 document.addEventListener('keydown', e => {
   if (e.key === 'Enter') {
     createTask();
@@ -57,3 +47,15 @@ document.addEventListener('keydown', e => {
 btnsDelete.forEach(button => {
   button.addEventListener('click', removeTask);
 });
+
+// // Another way of deleting tasks
+// const removeTask = event => {
+//   const taskDiv = event.target.closest('.task');
+//   if (taskDiv) {
+//     taskDiv.remove();
+//   }
+// };
+
+// btnsDelete.forEach(button => {
+//   button.addEventListener('click', removeTask);
+// });

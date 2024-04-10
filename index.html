@@ -8,55 +8,31 @@
     <title>Todollium</title>
   </head>
   <body>
-    <header>
-      <h1>TODOLLIUM</h1>
-      <div class="log-task">
-        <input type="text" />
-        <button class="btn-log">Log</button>
+    <div class="container">
+      <div class="todo-app">
+        <header>
+          <h1>TODOLLIUM 📒</h1>
+          <div class="log-task">
+            <input type="text" placeholder="Add your task" />
+            <button class="btn-log">Add</button>
+          </div>
+        </header>
+
+        <ul class="list-container">
+          <div class="task">
+            <li class="checked">code</li>
+            <div class="task-btn">
+              <button class="btn-delete">❌</button>
+            </div>
+          </div>
+          <div class="task">
+            <li class="checked">write</li>
+            <div class="task-btn">
+              <button class="btn-delete">❌</button>
+            </div>
+          </div>
+        </ul>
       </div>
-    </header>
-    <hr />
-    <main>
-      <ul>
-        <div class="task">
-          <li>code</li>
-          <div class="task-btn">
-            <button class="btn-complete">✅</button>
-            <button class="btn-delete">❌</button>
-          </div>
-        </div>
-        <div class="task">
-          <li>write</li>
-          <div class="task-btn">
-            <button>✅</button>
-            <button>❌</button>
-          </div>
-        </div>
-        <div class="task">
-          <li>clean apartment</li>
-          <div class="task-btn">
-            <button>✅</button>
-            <button>❌</button>
-          </div>
-        </div>
-        <div class="task">
-          <li>go to work</li>
-          <div class="task-btn">
-            <button>✅</button>
-            <button>❌</button>
-          </div>
-        </div>
-      </ul>
-    </main>
-    <hr />
-    <section>
-      <h2>Completed tasks</h2>
-      <ul>
-        <li>practice language</li>
-        <li>don't die</li>
-        <li>read</li>
-      </ul>
-    </section>
-    <hr />
+    </div>
   </body>
 </html>

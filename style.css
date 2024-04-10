@@ -3,68 +3,106 @@
   padding: 0;
   outline: none;
   box-sizing: border-box;
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-main {
-  padding: 50px;
-  width: 700px;
-}
-
-section {
-  padding: 50px;
-}
-
-hr {
+.container {
   width: 100%;
-  border: 2px solid black;
-  border-radius: 5px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000caf, #00f1a1);
+  padding: 10px;
 }
 
-h1 {
-  padding: 70px;
-  font-size: 70px;
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: white;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 15px;
 }
 
-input {
-  width: 500px;
-  height: 50px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 28px;
-}
-
-li {
-  width: 200px;
+.todo-app h1 {
+  color: #002765;
+  margin-bottom: 20px;
+  font-size: 36px;
+  text-align: center;
 }
 
 .log-task {
   display: flex;
-  justify-content: space-around;
-  padding-bottom: 50px;
+  justify-content: space-between;
+  align-items: center;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 15px;
+  font-size: 16px;
 }
 
 .btn-log {
-  width: 75px;
-  margin-left: 10px;
+  border: none;
+  outline: none;
+  background-color: #ff5945;
+  color: #fff;
+  font-size: 16px;
+  padding: 16px 50px;
+  border-radius: 400px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-log:hover {
+  background-color: #ff9945;
+}
+
+.btn-log:active {
+  transition: 0.1s;
+  padding-left: 60px;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 10px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(images/checked.png);
 }
 
 .task {
   padding: 10px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
