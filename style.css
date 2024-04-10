@@ -30,7 +30,7 @@
   text-align: center;
 }
 
-.log-task {
+.add-task {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,7 +49,7 @@ input {
   font-size: 16px;
 }
 
-.btn-log {
+.btn-add {
   border: none;
   outline: none;
   background-color: #ff5945;
@@ -61,11 +61,11 @@ input {
   transition: all 0.3s;
 }
 
-.btn-log:hover {
+.btn-add:hover {
   background-color: #ff9945;
 }
 
-.btn-log:active {
+.btn-add:active {
   transition: 0.1s;
   padding-left: 60px;
 }
@@ -109,10 +109,22 @@ ul li.checked {
 
 ul li.checked::before {
   background-image: url(images/checked.png);
+  animation: scale-up 0.3s;
 }
 
-.task {
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+}
+
+ul li span:hover {
+  background: #edeef0;
+  border-radius: 50%;
 }
