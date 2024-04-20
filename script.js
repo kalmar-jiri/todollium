@@ -2,7 +2,6 @@
 
 const inputElement = document.querySelector('input');
 const btnAdd = document.querySelector('.btn-add');
-const btnsDelete = document.querySelectorAll('.btn-delete');
 const taskList = document.querySelector('ul');
 
 const createTask = () => {
